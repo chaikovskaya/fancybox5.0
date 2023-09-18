@@ -1,0 +1,127 @@
+
+.search-result {
+    &-form {}
+    &-block {
+        margin-bottom: 30px;
+        padding: 38px 31px 48px;
+        background-color: var(--color3);
+    }
+    &-name {
+        display: block;
+    }
+    &-field {
+        position: relative;
+    }
+    &-input {
+        padding-left: 28px;
+        padding-right: 55px;
+        color: rgba(41, 60, 57, 0.80);
+        &:focus {
+            color: rgba(41, 60, 57, 0.80);
+        }
+    }
+    &-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        border-radius: 50%;
+        background-color: var(--color6);
+        transition: background-color 0.2s ease-in-out, border-color 0.1s ease-in-out;
+        &:hover {
+            background-color: var(--color7);
+        }
+    }
+    &-sections {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+    }
+    &-sections-item {
+        margin-right: 28px;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-sections-link {
+        color: var(--color2);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            color: var(--color6);
+        }
+    }
+    &-sections-item_active &-sections-link {
+        color: var(--color6);
+        font-weight: 600;
+    }
+
+    &-actions {
+        margin-bottom: 95px;
+    }
+    &-empty {
+        margin-bottom: 62px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+        &-name {
+            margin-bottom: 18px;
+        }
+        &-sections {
+            margin-bottom: 17px;
+        }
+        &-sections-item {
+            margin-right: 20px;
+            margin-bottom: 8px;
+        }
+        &-sections-link {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &-block {
+            margin-bottom: 30px;
+            padding: 20px 21px 38px;
+        }
+        &-button {
+            width: 35px;
+            height: 35px;
+        }
+        &-input {
+            padding-left: 20px;
+            padding-right: 45px;
+        }
+
+        &-actions {
+            margin-bottom: 56px;
+        }
+        &-empty {
+            margin-bottom: 56px;
+            font-size: 15px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-form {
+            margin-top: 10px;
+        }
+        &-block {
+            padding-bottom: 33px;
+        }
+    }
+}

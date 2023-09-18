@@ -1,0 +1,45 @@
+
+.actions-detail {
+    margin-bottom: 76px;
+    &-main {
+        .main-container {
+            min-height: 323px;
+        }
+        .main-title {
+            font-size: 28px;
+            line-height: 39px;
+            text-transform: none;
+        }
+        .main-panel {
+            margin-top: 35px;
+        }
+    }
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 50px;
+        &-main {
+            .main-container {
+                min-height: 280px;
+            }
+            .main-title {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .main-panel {
+                margin-top: 28px;
+            }
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-main {
+            .main-container {
+                min-height: auto;
+            }
+        }
+    }
+}

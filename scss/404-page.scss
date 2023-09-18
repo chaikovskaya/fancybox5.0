@@ -1,0 +1,43 @@
+
+.error-page {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    &-name {
+        font-size: 120px;
+        line-height: 130px;
+        font-weight: 700;
+        color: var(--color6);
+    }
+    &-info {
+        margin-bottom: 25px;
+        font-weight: 500;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+        max-width: 500px;
+        padding-top: 40px;
+        padding-bottom: 70px;
+        &-name {
+            font-size: 90px;
+            line-height: 100px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-name {
+            font-size: 80px;
+            line-height: 90px;
+        }
+        &-info {
+            margin-bottom: 20px;
+        }
+    }
+}

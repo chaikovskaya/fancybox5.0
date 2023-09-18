@@ -1,0 +1,81 @@
+
+.wishlist {
+    margin-bottom: 85px;
+    &-panel {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    &-title {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    &-activity {
+        margin-left: auto;
+    }
+    &-reset {
+        display: flex;
+        align-items: center;
+        text-decoration: underline;
+        color: var(--color12);
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.15px;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &-reset-icon {
+        margin-right: 11px;
+    }
+    &-reset-label { }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+        margin-bottom: 40px;
+    }
+    &-list-item {}
+
+    @media screen
+    and (max-width: $desktop){
+        &-list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 65px;
+        &-panel {
+            margin-bottom: 22px;
+        }
+        &-list {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 25px;
+            grid-row-gap: 30px;
+            margin-bottom: 30px;
+        }
+        &-reset {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &-reset-icon {
+            width: 20px;
+            margin-right: 9px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 23px;
+            margin-bottom: 27px;
+        }
+        &-reset-label {
+            display: none;
+        }
+    }
+}

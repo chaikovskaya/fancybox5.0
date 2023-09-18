@@ -1,0 +1,25 @@
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+    line-height: 0;
+  }
+}
+
+@mixin bgrcolor() {
+  transition: background-color 0.2s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+@mixin fix-rows() {
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}

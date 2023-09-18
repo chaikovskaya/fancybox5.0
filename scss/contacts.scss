@@ -1,0 +1,212 @@
+
+.contacts {
+    margin-bottom: 95px;
+    &-points {
+    }
+    &-points-inner {
+        display: flex;
+    }
+    &-points-sidebar {
+        width: 51%;
+        height: 592px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 30px;
+        .simplebar-vertical {
+            right: 10px;
+        }
+    }
+    &-points-map {
+        width: 49%;
+        height: 592px;
+    }
+    &-points-map-value {
+        width: 100%;
+        height: 100%;
+    }
+    &-points-select {
+        margin-bottom: 22px;
+    }
+    &-points-shops {
+        list-style-type: none;
+        height: 100%;
+    }
+    &-points-shops-item {
+        margin-bottom: 26px;
+        border: 1px solid transparent;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-points-shops-item.active {
+        border-color: rgba(206, 206, 206, 0.8);
+    }
+    &-points-shops-item:hover {
+        border-color: rgba(206, 206, 206, 0.8);
+    }
+    &-points-shops-left {
+        flex-grow: 1;
+        padding: 18px 29px 26px;
+    }
+    &-points-shops-right {
+        min-width: 195px;
+        width: 195px;
+        margin-left: auto;
+    }
+    &-points-shops-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-points-shops-name {
+        margin-bottom: 5px;
+        color: var(--color2);
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+    &-points-shops-link {
+        display: flex;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 21px;
+        cursor: pointer;
+        min-height: 178px;
+    }
+    &-points-shops-icon {
+        margin-right: 5px;
+    }
+    &-points-shops-label {
+        margin-bottom: 6px;
+        color: var(--color2);
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        font-weight: 500;
+    }
+    &-points-shops-hours {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        color: var(--color19);
+    }
+    &-points-shops-info {
+        margin-bottom: 10px;
+        color: var(--color10);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+        &-points-sidebar {
+            width: 57%;
+        }
+        &-points-map {
+            width: 43%;
+        }
+        &-points-shops-right {
+            min-width: 150px;
+            width: 150px;
+        }
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 65px;
+        &-points {
+            flex-direction: column;
+        }
+        &-points-sidebar {
+            width: 52%;
+            padding-right: 20px;
+            height: 410px;
+            .simplebar-vertical {
+                right: 7px;
+            }
+        }
+        &-points-map {
+            width: 48%;
+            height: 410px;
+        }
+        &-points-shops-item {
+            margin-bottom: 20px;
+        }
+        &-points-shops-link {
+            min-height: 120px
+        }
+        &-points-shops-left {
+            padding: 10px 15px;
+        }
+        &-points-shops-right {
+            min-width: 120px;
+            width: 120px;
+        }
+        &-points-shops-name {
+            margin-bottom: 3px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-points-shops-label {
+            margin-bottom: 5px;
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 400;
+        }
+        &-points-shops-info {
+            margin-bottom: 5px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-points-shops-hours {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-points-inner {
+            flex-direction: column;
+        }
+        &-points-sidebar {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            padding-right: 0;
+            margin-bottom: 20px;
+            .simplebar-vertical {
+                right: 0;
+            }
+        }
+        &-points-map {
+            width: 100%;
+            height: 394px;
+        }
+        &-points-shops-left {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &-points-shops-right {
+            display: none;
+        }
+        &-points-shops-item {
+            margin-bottom: 2px;
+        }
+        &-points-shops-link {
+            flex-direction: column;
+            min-height: 110px;
+        }
+        &-points-shops-name {
+            margin-bottom: 10px;
+        }
+        &-points-shops-label {
+            margin-bottom: 10px;
+        }
+        &-points-shops-info {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,227 @@
+
+.rating {
+    display: flex;
+    &-item {
+        margin-right: 7px;
+        line-height: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-item_active {}
+    &-icon {
+        path {
+            fill: var(--color30);
+        }
+    }
+    &-item_active ~ &-item &-icon {
+        path {
+            fill: transparent;
+        }
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        &-item {
+            margin-right: 5px;
+        }
+        &-icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.rating-form {
+    display: flex;
+    &-radio {
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+    &-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: -20px;
+        margin-right: 7px;
+        path {
+            fill: var(--color30);
+        }
+    }
+    &-radio:checked + &-icon ~ &-icon path {
+        fill: transparent;
+    }
+
+    @media screen
+    and (max-width: $tablet){}
+}
+
+.reviews {
+    margin-bottom: 95px;
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        margin-bottom: 40px;
+    }
+    &-list-item {
+    }
+    &-block {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 35px 32px 40px;
+        box-shadow: 0px 4px 60px #EFEFEF;
+    }
+    &-panel {
+        display: flex;
+        margin-bottom: 33px;
+    }
+    &-left {
+        min-width: 130px;
+        width: 130px;
+        padding-right: 10px;
+        margin-right: 25px;
+        border-right: 1px solid var(--color5);
+    }
+    &-date {
+        display: block;
+        max-width: max-content;
+        margin-bottom: 12px;
+        padding: 3px 12px;
+        background-color: var(--color6);
+        color: #fff;
+        border-radius: 50em;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.42px;
+    }
+    &-city {
+        display: block;
+        color: var(--color2);
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: -0.4px;
+    }
+    &-right {
+        flex-grow: 1;
+    }
+    &-name {
+        display: block;
+        margin-top: -2px;
+        margin-bottom: 10px;
+        color: var(--color2);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+    }
+    &-info {
+        margin-bottom: 27px;
+        font-weight: 300;
+        letter-spacing: 0.15px;
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-more {
+        margin-top: auto;
+        color: var(--color6);
+        font-size: 16px;
+        text-decoration-line: underline;
+        max-width: max-content;
+        &:hover {
+            text-decoration: none;
+            color: var(--color6);
+        }
+    }
+
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+        margin-bottom: 65px;
+        &-list {
+            grid-column-gap: 25px;
+            grid-row-gap: 25px;
+            margin-bottom: 27px;
+        }
+        &-block {
+            padding: 27px 25px 34px;
+        }
+        &-left {
+            min-width: 100px;
+            width: 100px;
+            padding-right: 11px;
+            margin-right: 10px;
+        }
+        &-panel {
+            margin-bottom: 17px;
+        }
+        &-date {
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 19px;
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+        &-city {
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &-name {
+            margin-top: 2px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+        &-info {
+            margin-bottom: 23px;
+        }
+        &-more {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-list {
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            margin-bottom: 27px;
+        }
+        &-panel {
+            flex-direction: column;
+            margin-bottom: 17px;
+        }
+        &-left {
+            display: flex;
+            align-items: flex-start;
+            min-width: auto;
+            width: 100%;
+            padding-right: 0;
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
+        &-date {
+            margin-bottom: 0;
+            margin-right: 13px;
+        }
+        &-city {
+            padding-top: 3px;
+            padding-left: 13px;
+            border-left: 1px solid var(--color5);
+        }
+        &-info {
+            margin-bottom: 17px;
+        }
+    }
+}
